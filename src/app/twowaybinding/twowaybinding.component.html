@@ -1,0 +1,12 @@
+<h3><u>Two Way Binding</u></h3>
+<h4>Login</h4>
+<label>Username: </label>
+<input type="text" name="uname" (change)="enableLogin()" [(ngModel)]="uname"/>
+<br/><br/>
+<label>Password: </label>
+<input type="password" name="pwd" (change)="enableLogin()" [(ngModel)]="pwd"/>
+<br/><br/>
+<input type="button" name="login" value="Login" (click)="checkUser()" [disabled]="flag"/>
+<br/><br/>
+
+

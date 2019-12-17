@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropertybindingComponent implements OnInit {
 
-  constructor() { }
+  flag:boolean;
+
+  constructor() {
+    this.flag = true;
+  }
 
   ngOnInit() {
   }
 
+  enableText(){
+    this.flag = !this.flag;
+  }
 }
