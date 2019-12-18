@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-twowaybinding',
@@ -11,9 +12,15 @@ export class TwowaybindingComponent implements OnInit {
   pwd:string;
   pwd2:string;
   flag:boolean;
+  loginFlag:boolean;
+  showPwd:boolean;
+
+  months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
   constructor() {
     this.flag = true;
+    this.showPwd = true;
+    this.loginFlag = false;
     this.uname = "";
     this.pwd = "";
     this.pwd2 = "qwerty";
@@ -28,13 +35,19 @@ export class TwowaybindingComponent implements OnInit {
       this.flag = false
     }
   }
+  showPassword()
+  {
+      this.showPwd = !this.showPwd;
+  }
 
   checkUser(){
     if(this.pwd == this.pwd2) {
       alert("Hello " + this.uname);
+      this.loginFlag = true;
     }
     else {
       alert("Invalid Credentials");
+      this.loginFlag = false;
     }
   }
 }

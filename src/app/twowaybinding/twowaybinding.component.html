@@ -1,12 +1,30 @@
 <h3><u>Two Way Binding</u></h3>
-<h4>Login</h4>
+<h4>Register</h4>
 <label>Username: </label>
 <input type="text" name="uname" (change)="enableLogin()" [(ngModel)]="uname"/>
 <br/><br/>
 <label>Password: </label>
 <input type="password" name="pwd" (change)="enableLogin()" [(ngModel)]="pwd"/>
 <br/><br/>
-<input type="button" name="login" value="Login" (click)="checkUser()" [disabled]="flag"/>
+<input type="checkbox" name="Show Password" value="Show Password" (change)="showPassword()"/>
+<label>Show Password</label>
+<br/>
+<label (click)="showPassword()" [hidden]="showPwd">Password: {{pwd}}</label>
 <br/><br/>
+<label>Select Birth Month: </label>
+<select>
+    <option *ngFor="let month of months">{{month}}</option>
+</select>
+<br/><br/>
+<input type="button" name="Register" value="Register" (click)="checkUser()" [disabled]="flag"/>
+<br/><br/>
+<div *ngIf = "loginFlag, else elseBlock">
+    Hello {{uname}}
+</div>
+<ng-template #elseBlock>
+    Hello Guest
+</ng-template>
+
+
 
 

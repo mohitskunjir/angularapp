@@ -1,0 +1,12 @@
+<h3><u>Pipe Demo</u></h3>
+<p>{{title_inLowercase | uppercase}}</p>
+<p>{{title_inUppercase | lowercase}}</p>
+<p>Date: {{today | date:'d/M/y'}}</p>
+<p>{{jsonData | json}}</p>
+<p>{{50123 | currency:"USD"}}</p>
+<p>{{50123 | currency:"USD":true}}</p>
+<p>{{50123 | currency:"USD":false}}</p>
+<p>{{586.123456789 | number: '3.4-4'}}</p>
+<p>{{00.6532 | percent}}</p>
+<p>{{numbers | slice:3:5}}</p>
+<p>Square of 5: {{ 5 | customPipe }}</p>

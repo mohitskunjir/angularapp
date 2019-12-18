@@ -1,0 +1,13 @@
+<h3><u>Directives</u></h3>
+
+<div *ngFor="let number of numbers; let i of index">
+    <div ngSwitch="{{i%2}}">
+        <div *ngSwitchCase="'0'">The number: {{i}} is Even</div>
+        <div *ngSwitchCase="'1'">The number: {{i}} is Odd</div>
+        <div *ngSwitchDefault>Nothing Found</div>
+    </div>
+</div>
+
+<h3><u>Custom Directives</u></h3>
+<p appCustomDirective >This is p tag with custom Directive</p>
+<p>This is normal p tag</p>
