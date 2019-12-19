@@ -9,6 +9,12 @@ import { DirectivesComponent } from './directives/directives.component';
 import { CustomDirectiveDirective } from './custom-directive.directive';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { CustomPipePipe } from './custom-pipe.pipe';
+import { Parent1Component } from './parent1/parent1.component';
+import { Parent2Component } from './parent2/parent2.component';
+import { Child2Component } from './child2/child2.component';
+import { Child1Component } from './child1/child1.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +24,12 @@ import { CustomPipePipe } from './custom-pipe.pipe';
     DirectivesComponent,
     CustomDirectiveDirective,
     PipeDemoComponent,
-    CustomPipePipe
+    CustomPipePipe,
+    Parent1Component,
+    Parent2Component,
+    Child2Component,
+    Child1Component,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,

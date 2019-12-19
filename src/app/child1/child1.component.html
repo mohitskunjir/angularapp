@@ -1,0 +1,11 @@
+<h3><u>Child-1</u></h3> 
+Hello, {{usernameFromParent}}
+<br/>
+Age: {{ageFromParent}}
+<br/>
+Json: {{userDataFromParent | json}}
+<br/>
+<div *ngFor='let data of userDataFromParent'>
+  {{data.tempAddr}}
+</div>
+
